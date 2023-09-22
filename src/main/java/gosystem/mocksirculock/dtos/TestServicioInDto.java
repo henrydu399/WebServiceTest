@@ -4,6 +4,7 @@ package gosystem.mocksirculock.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import gosystem.mocksirculock.authorizations.AuthorizationBase;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
@@ -15,8 +16,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class TestServicioInDto  {
+
+public class TestServicioInDto extends AuthorizationBase {
 	
 
 	@JsonProperty("serviceName")
@@ -25,8 +26,8 @@ public class TestServicioInDto  {
 	 @JsonProperty("metodoName")
 	private String metodoName;
 	 
-	 @JsonProperty("numeroHilos")
-	private Integer numeroHilos;
+	 @JsonProperty("ejecuciones")
+	private Integer ejecuciones;
 	 
 	 @JsonProperty("bodyJson")
 	private String bodyJson;

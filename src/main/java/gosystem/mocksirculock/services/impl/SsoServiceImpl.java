@@ -88,8 +88,9 @@ public class SsoServiceImpl extends ITaksWebService     {
 			m = base.getMethod(metodoName, TestServicioInDto.class);
 			
 			
-				Result rv = (Result) m.invoke(  base.newInstance() , obj );
-				out.setObj(rv);
+			Object rv = (Object) m.invoke(base.newInstance(), obj);
+			String jsonResult = UtilGson.SerializeObjet(rv);		
+			out.setResponse(jsonResult);
 				
 				return CompletableFuture.completedFuture(out) ;
 			

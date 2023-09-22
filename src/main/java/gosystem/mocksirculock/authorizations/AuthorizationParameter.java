@@ -1,6 +1,5 @@
-package gosystem.mocksirculock.dtos;
+package gosystem.mocksirculock.authorizations;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,9 +12,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TestServicioOutDto {
-	
-	private String error;
-	private Object response;
+public class AuthorizationParameter {
 
+	private String value;
+	private String name;
+	private boolean auto;
+	
 }
